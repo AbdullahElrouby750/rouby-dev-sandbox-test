@@ -1,0 +1,82 @@
+{{ 'section-custom-banner.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="main-wrapper"
+>
+  {% comment %} top bar {% endcomment %}
+  <div
+    class="top-bar"
+  >
+    <h1 class="top-bar__heading">{{ section.settings.main_heading }}</h1>
+    <p class="top-bar__paragraph">{{ section.settings.main_textarea }}</p>
+    <a href="{{ section.settings.gift_btn_link }}" class="top-bar__button">
+      {{- section.settings.gift_btn_text -}}
+    </a>
+  </div>
+  {% comment %} end top bar {% endcomment %}
+
+  <div></div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Banner",
+  "tag": "section",
+  "disabled_on": { "groups": ["header", "footer"] },
+  "settings": [
+    {
+      "type": "text",
+      "id": "shop_name",
+      "label": "Shop Name",
+      "default": "My Shop"
+    },
+    {
+      "type": "text",
+      "id": "shop_slogan",
+      "label": "Shop Slogan",
+      "default": "Welcome to our shop"
+    },
+    {
+      "type": "text",
+      "id": "gift_btn_text",
+      "label": "Button Text",
+      "default": "choose gift"
+    },
+    {
+      "type": "url",
+      "id": "gift_btn_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "The gift Guide"
+    },
+    {
+      "type": "textarea",
+      "id": "main_textarea",
+      "label": "Main Textarea",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+    },
+    {
+      "type": "text",
+      "id": "shop_btn_text",
+      "label": "Button Text",
+      "default": "shop now"
+    },
+    {
+      "type": "url",
+      "id": "shop_btn_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner",
+    }
+  ]
+}
+{% endschema %}
