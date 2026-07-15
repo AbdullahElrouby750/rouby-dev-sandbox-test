@@ -1,0 +1,81 @@
+.main-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.top-bar {
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    gap: 360px;
+
+    width: 100%;
+    height: 64px;
+
+    background: #F5F5F5;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.top-bar__heading {
+    /* Group 1000007777 */
+
+    width: 151.44px;
+    height: 19px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.top-bar__text {
+    /* Find the ideal gift for your loved ones. */
+
+    width: 260px;
+    height: 14px;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 13px;
+    /* identical to box height, or 84% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.top-bar__button {
+    /* Group 1000007810 */
+
+    width: 207px;
+    height: 44px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+}
